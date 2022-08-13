@@ -1072,7 +1072,7 @@ ax.collections[0].colorbar.set_label('Trips in thousands', fontsize=12)
 
 
     
-![png](output_39_0.png)
+![png](./charts/fig10_seaborn.png)
     
 
 
@@ -1142,7 +1142,7 @@ ggplot(trips)\
 
 
     
-![png](output_46_0.png)
+![png](./charts/fig12_ggplot.png)
     
 
 
@@ -1364,7 +1364,7 @@ p.circle(x="MercatorX", y="MercatorY",
 show(p)
 ```
 
-![alt text](charts/fig14_bokeh.png)
+![alt text](./charts/fig14_bokeh.png)
 
 # Map Uber rides by base
 
@@ -1412,7 +1412,7 @@ plt.show()
 
 
     
-![png](output_59_0.png)
+![png](./charts/fig15_cartopy.png)
     
 
 
