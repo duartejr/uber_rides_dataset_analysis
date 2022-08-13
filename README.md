@@ -700,65 +700,6 @@ text = bars.mark_text(
 
 
 
-
-
-<div id="altair-viz-1f52d78bce504098b54c5b076cfb0d57"></div>
-<script type="text/javascript">
-  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-1f52d78bce504098b54c5b076cfb0d57") {
-      outputDiv = document.getElementById("altair-viz-1f52d78bce504098b54c5b076cfb0d57");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
-
-    function maybeLoadScript(lib, version) {
-      var key = `${lib.replace("-", "")}_version`;
-      return (VEGA_DEBUG[key] == version) ?
-        Promise.resolve(paths[lib]) :
-        new Promise(function(resolve, reject) {
-          var s = document.createElement('script');
-          document.getElementsByTagName("head")[0].appendChild(s);
-          s.async = true;
-          s.onload = () => {
-            VEGA_DEBUG[key] = version;
-            return resolve(paths[lib]);
-          };
-          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-          s.src = paths[lib];
-        });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else {
-      maybeLoadScript("vega", "5")
-        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
-        .then(() => maybeLoadScript("vega-embed", "6"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": "bar", "encoding": {"x": {"field": "Total", "type": "quantitative"}, "y": {"field": "Base", "type": "nominal"}}, "title": "Trips by Base"}, {"mark": {"type": "text", "align": "right", "baseline": "middle", "color": "#ffffff", "dx": -3}, "encoding": {"text": {"field": "Total", "type": "quantitative"}, "x": {"field": "Total", "type": "quantitative"}, "y": {"field": "Base", "type": "nominal"}}, "title": "Trips by Base"}], "data": {"name": "data-59aa53d7da98bd5cca9186caa85ba85f"}, "height": 200, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-59aa53d7da98bd5cca9186caa85ba85f": [{"Base": "B02512", "Total": 205673}, {"Base": "B02598", "Total": 1393113}, {"Base": "B02617", "Total": 1458853}, {"Base": "B02682", "Total": 1212789}, {"Base": "B02764", "Total": 263899}]}}, {"mode": "vega-lite"});
-</script>
-
-
-
 ![](./charts/fig06_altair.png)
 
 # Trips by base and month
@@ -1238,66 +1179,6 @@ alt.Chart(trips, title='Trips by Base and week day').mark_rect().encode(
     color=alt.Color('Total', scale=alt.Scale(scheme='blues')),
 ).properties(height=300, width=300)
 ```
-
-
-
-
-
-<div id="altair-viz-fafa97f1ba6d4b4ba064820b8e730dbc"></div>
-<script type="text/javascript">
-  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-fafa97f1ba6d4b4ba064820b8e730dbc") {
-      outputDiv = document.getElementById("altair-viz-fafa97f1ba6d4b4ba064820b8e730dbc");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
-
-    function maybeLoadScript(lib, version) {
-      var key = `${lib.replace("-", "")}_version`;
-      return (VEGA_DEBUG[key] == version) ?
-        Promise.resolve(paths[lib]) :
-        new Promise(function(resolve, reject) {
-          var s = document.createElement('script');
-          document.getElementsByTagName("head")[0].appendChild(s);
-          s.async = true;
-          s.onload = () => {
-            VEGA_DEBUG[key] = version;
-            return resolve(paths[lib]);
-          };
-          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-          s.src = paths[lib];
-        });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else {
-      maybeLoadScript("vega", "5")
-        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
-        .then(() => maybeLoadScript("vega-embed", "6"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-fbb9d285ed803278ef34ee7d71a02aa0"}, "mark": "rect", "encoding": {"color": {"field": "Total", "scale": {"scheme": "blues"}, "type": "quantitative"}, "x": {"axis": {"title": "Week day"}, "field": "day_of_week", "sort": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "type": "nominal"}, "y": {"field": "Base", "type": "nominal"}}, "height": 300, "title": "Trips by Base and week day", "width": 300, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-fbb9d285ed803278ef34ee7d71a02aa0": [{"Base": "B02512", "day_of_week": "Monday", "Total": 25.46}, {"Base": "B02512", "day_of_week": "Tuesday", "Total": 31.67}, {"Base": "B02512", "day_of_week": "Wednesday", "Total": 32.93}, {"Base": "B02512", "day_of_week": "Thursday", "Total": 35.03}, {"Base": "B02512", "day_of_week": "Friday", "Total": 33.32}, {"Base": "B02512", "day_of_week": "Saturday", "Total": 26.77}, {"Base": "B02512", "day_of_week": "Sunday", "Total": 20.49}, {"Base": "B02598", "day_of_week": "Monday", "Total": 163.54}, {"Base": "B02598", "day_of_week": "Tuesday", "Total": 202.38}, {"Base": "B02598", "day_of_week": "Wednesday", "Total": 216.64}, {"Base": "B02598", "day_of_week": "Thursday", "Total": 235.16}, {"Base": "B02598", "day_of_week": "Friday", "Total": 229.91}, {"Base": "B02598", "day_of_week": "Saturday", "Total": 198.83}, {"Base": "B02598", "day_of_week": "Sunday", "Total": 146.65}, {"Base": "B02617", "day_of_week": "Monday", "Total": 176.42}, {"Base": "B02617", "day_of_week": "Tuesday", "Total": 214.17}, {"Base": "B02617", "day_of_week": "Wednesday", "Total": 222.67}, {"Base": "B02617", "day_of_week": "Thursday", "Total": 240.22}, {"Base": "B02617", "day_of_week": "Friday", "Total": 234.38}, {"Base": "B02617", "day_of_week": "Saturday", "Total": 206.55}, {"Base": "B02617", "day_of_week": "Sunday", "Total": 164.45}, {"Base": "B02682", "day_of_week": "Monday", "Total": 143.37}, {"Base": "B02682", "day_of_week": "Tuesday", "Total": 176.2}, {"Base": "B02682", "day_of_week": "Wednesday", "Total": 189.86}, {"Base": "B02682", "day_of_week": "Thursday", "Total": 205.09}, {"Base": "B02682", "day_of_week": "Friday", "Total": 201.59}, {"Base": "B02682", "day_of_week": "Saturday", "Total": 170.16}, {"Base": "B02682", "day_of_week": "Sunday", "Total": 126.51}, {"Base": "B02764", "day_of_week": "Monday", "Total": 32.68}, {"Base": "B02764", "day_of_week": "Tuesday", "Total": 39.38}, {"Base": "B02764", "day_of_week": "Wednesday", "Total": 34.38}, {"Base": "B02764", "day_of_week": "Thursday", "Total": 39.65}, {"Base": "B02764", "day_of_week": "Friday", "Total": 41.94}, {"Base": "B02764", "day_of_week": "Saturday", "Total": 43.8}, {"Base": "B02764", "day_of_week": "Sunday", "Total": 32.08}]}}, {"mode": "vega-lite"});
-</script>
-
 
 
 ![](./charts/fig13_altair.png)
