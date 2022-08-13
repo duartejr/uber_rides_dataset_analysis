@@ -193,7 +193,7 @@ plt.show()
 
 
     
-![png](output_7_0.png)
+![png](https://github.com/duartejr/uber_rides_dataset_analysis/blob/main/charts/fig01_trips_day_matplotlib.png?raw=true)
     
 
 
@@ -485,7 +485,7 @@ plt.show()
 
 
     
-![png](output_10_0.png)
+![png](https://github.com/duartejr/uber_rides_dataset_analysis/blob/main/charts/fig02_trips_month_hour_pandas.png?raw=true)
     
 
 
@@ -537,7 +537,7 @@ ax;
 
 
     
-![png](output_14_0.png)
+![png](https://github.com/duartejr/uber_rides_dataset_analysis/blob/main/charts/fig03_seaborn.png?raw=true)
     
 
 
@@ -602,7 +602,7 @@ ggplot(trips)\
 
 
     
-![png](output_20_0.png)
+![png](./charts/fig05_ggplot.png)
     
 
 
